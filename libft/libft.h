@@ -26,7 +26,14 @@
 # define SUCCESS	0
 # define FAILURE	!0
 
+# define TRUE		1
+# define FALSE		0
+
 # define BUFF_SIZE		40
+
+# define PASS		{}
+
+typedef char	t_bool;
 
 typedef struct	s_list
 {
