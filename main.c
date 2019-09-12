@@ -11,10 +11,27 @@ static void		*st_get_func(const char *s)
 	return NULL;
 }
 
+// TODO: Fix return value in case of null func and display proper error
 static uint		st_print_error(uint code, void *func)
 {
-	ft_putstr("Standard commands:\nMessage Digest commands:\nmd5\nsha256");
+	ft_putstr_fd("Standard commands:\nMessage Digest commands:\nmd5\nsha256", 2);
 	return code;
+}
+
+static void		debug_option()
+{
+	t_options	*opt;
+	t_list		*l;
+	t_target	*t;
+
+	opt = get_options();
+	l = opt->target_list;
+	while (l)
+	{
+		t = (t_target*)l->content;
+		printf("is file: %d: %s\n", t->is_file, t->s);
+		l = l->next;
+	}
 }
 
 int main(int ac, char **av)
@@ -33,6 +50,7 @@ int main(int ac, char **av)
 	error_code = check_conflict();
 	if(error_code || !func)
 		return st_print_error(error_code, func);
+	debug_option();
 	ft_putstr(func("Hello"));
 	return 0;
 }

@@ -10,16 +10,13 @@
 
 # include <stdint.h>
 
-typedef struct	s_internal_data{
+typedef struct	s_data{
 	uint32_t	a;
 	uint32_t	b;
 	uint32_t	c;
 	uint32_t	d;
-}				t_internal_data;
+}				t_data;
 
 char	*md5(char *src);
-
-uint32_t	md5_rotation(uint i);
-uint32_t	md5_constant(uint i);
 
 #endif //FT_SSL_MD5_MD5_H
