@@ -21,12 +21,12 @@
 
 typedef struct	s_target{
 	t_bool		is_file;
-	const char 	*s;
+	const char	*s;
 }				t_target;
 
 typedef struct	s_options{
 	t_bool		quiet;
-	t_bool 		print;
+	t_bool		print;
 	t_bool		reverse;
 	t_bool		string;
 	t_list		*target_list;
@@ -36,4 +36,4 @@ t_options		*get_options();
 uint			set_options_from_arg(const char *s);
 uint			check_conflict();
 
-#endif //FT_SSL_MD5_CRYPTO_HEADER_H
+#endif
