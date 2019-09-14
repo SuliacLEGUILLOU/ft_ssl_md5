@@ -45,5 +45,5 @@ char		*ft_itoa(int value)
 	*ptr-- = '\0';
 	while (ptr1 < ptr)
 		st_swap(ptr--, ptr1++);
-	return result;
+	return (result);
 }

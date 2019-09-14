@@ -41,7 +41,7 @@ static char	*st_add_end(char *begin, int value, int base)
 		*ptr++ = '0';
 	}
 	ptr-- = '\0';
-	return ptr;
+	return (ptr);
 }
 
 char		*ft_itoa_base(int value, int base)
@@ -49,7 +49,7 @@ char		*ft_itoa_base(int value, int base)
 	char	*result;
 	char	*ptr;
 	char	*ptr1;
-	int		tmp_value;
+	int		tmp;
 
 	if (!(result = malloc(35 * sizeof(char))))
 		return (NULL);
@@ -59,12 +59,12 @@ char		*ft_itoa_base(int value, int base)
 	{
 		tmp_value = value;
 		value /= base;
-		*ptr++ = "FEDCBA9876543210123456789ABCDE"[15 + (tmp_value - value * base)];
+		*ptr++ = "FEDCBA9876543210123456789ABCDE"[15 + (tmp - value * base)];
 		if (!value)
 			break ;
 	}
-    ptr = st_add_end(ptr, tmp_value, base);
+	ptr = st_add_end(ptr, tmp, base);
 	while (ptr1 < ptr)
 		st_swap(ptr--, ptr1++);
-	return result;
+	return (result);
 }
