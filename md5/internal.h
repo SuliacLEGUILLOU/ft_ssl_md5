@@ -14,4 +14,9 @@ t_data		init_state();
 void		*init_data(char *src, uint len);
 uint		get_data_len(const char *src);
 
-#endif //FT_SSL_MD5_INTERNAL_H
+uint32_t	state_f(t_data s);
+uint32_t	state_g(t_data s);
+uint32_t	state_h(t_data s);
+uint32_t	state_i(t_data s);
+
+#endif
