@@ -1,6 +1,14 @@
-//
-// Created by s18 on 11/09/2019.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   options.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sle-guil <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/14 15:08:29 by sle-guil          #+#    #+#             */
+/*   Updated: 2019/09/14 15:08:33 by sle-guil         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "crypto_header.h"
 
@@ -20,9 +28,9 @@ t_options		*get_options()
 
 static uint		st_assign_opt(t_options *o, const char *s)
 {
-	uint		len;
+	uint	len;
 
-	len = ft_strlen(s);
+	len = (uint)ft_strlen(s);
 	while(len-- > 0) {
 		if (s[len] == 'p')
 			o->print = TRUE;
