@@ -7,8 +7,8 @@
 
 # include "md5.h"
 
-uint32_t	rotation(uint i);
-uint32_t	constant(uint i);
+uint32_t	md5_rotation(uint8_t i);
+uint32_t	md5_constant(uint8_t i);
 
 t_data		init_state();
 void		*init_data(char *src, uint64_t len);

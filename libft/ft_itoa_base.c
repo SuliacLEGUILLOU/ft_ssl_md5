@@ -23,6 +23,9 @@ static void	st_swap(char *p1, char *p2)
 
 static char	*st_add_end(char *begin, int value, int base)
 {
+	char	*ptr;
+
+	ptr = begin;
 	if (base == 10 && value < 0)
 		*ptr++ = '-';
 	else if (base == 16)
@@ -40,7 +43,8 @@ static char	*st_add_end(char *begin, int value, int base)
 		*ptr++ = 'b';
 		*ptr++ = '0';
 	}
-	ptr-- = '\0';
+	ptr--;
+	*ptr = 0;
 	return (ptr);
 }
 
@@ -57,7 +61,7 @@ char		*ft_itoa_base(int value, int base)
 	ptr1 = result;
 	while (1)
 	{
-		tmp_value = value;
+		tmp = value;
 		value /= base;
 		*ptr++ = "FEDCBA9876543210123456789ABCDE"[15 + (tmp - value * base)];
 		if (!value)

@@ -12,7 +12,7 @@
 
 #include "md5.h"
 
-uint32_t	md5_rotation(uint i){
+uint32_t	md5_rotation(uint8_t i){
 	static const uint32_t r[] = {
 			7, 12, 17, 22, 7, 12, 17, 22, 7, 12, 17, 22, 7, 12, 17, 22,
 			5,  9, 14, 20, 5,  9, 14, 20, 5,  9, 14, 20, 5,  9, 14, 20,
@@ -22,7 +22,7 @@ uint32_t	md5_rotation(uint i){
 	return r[i];
 }
 
-uint32_t	md5_constant(uint i){
+uint32_t	md5_constant(uint8_t i){
 	static const uint32_t k[64] = {
 			0xd76aa478, 0xe8c7b756, 0x242070db, 0xc1bdceee,
 			0xf57c0faf, 0x4787c62a, 0xa8304613, 0xfd469501,

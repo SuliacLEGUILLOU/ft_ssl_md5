@@ -30,6 +30,7 @@ SRCS =	ft_getopt.c \
 		ft_toupper.c \
 		ft_atoi.c \
 		ft_itoa.c \
+		ft_itoa_base.c \
 		ft_getpow.c \
 		ft_getsigne.c \
 		ft_lstadd.c \

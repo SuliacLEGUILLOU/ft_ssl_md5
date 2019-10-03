@@ -63,6 +63,6 @@ int				main(int ac, char **av)
 	if (error_code || !cypher)
 		return (st_print_error(error_code, cypher));
 	debug_option();
-    cypher("Hello World");
+    ft_putstr(cypher("Hello World"));
 	return (0);
 }

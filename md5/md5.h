@@ -17,6 +17,12 @@ typedef struct	s_data{
 	uint32_t	d;
 }				t_data;
 
+typedef struct	s_intern{
+	uint32_t	f;
+	uint32_t	g;
+	uint32_t	tmp;
+}				t_intern;
+
 typedef struct	s_md5_cypher{
     uint32_t	(*add_chunk)(const char *);
     char		*(*end)(void);
