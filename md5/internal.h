@@ -11,7 +11,7 @@ uint32_t	rotation(uint i);
 uint32_t	constant(uint i);
 
 t_data		init_state();
-void		*init_data(char *src, uint len);
+void		*init_data(char *src, uint64_t len);
 uint		get_data_len(const char *src);
 
 uint32_t	state_f(t_data s);

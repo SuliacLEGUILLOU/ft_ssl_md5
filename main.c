@@ -48,21 +48,21 @@ static void		debug_option(void)
 
 int				main(int ac, char **av)
 {
-	char	*(*func)(const char *s);
-	uint	error_code;
-	uint	i;
+	char        *(*cypher)(const char*);
+	uint	    error_code;
+	uint	    i;
 
 	error_code = 0;
 	i = 2;
 	if (ac == 1)
-		ft_putstr("usage: ft_ssl command [command opts] [command args]");
-	func = st_get_func(av[1]);
+		ft_putstr("usage: ft_ssl command [command opts] [command args]"); // TODO: This crash
+	cypher = st_get_func(av[1]);
 	while (i < ac && !error_code)
 		error_code = set_options_from_arg(av[i++]);
 	error_code = check_conflict();
-	if (error_code || !func)
-		return (st_print_error(error_code, func));
+	if (error_code || !cypher)
+		return (st_print_error(error_code, cypher));
 	debug_option();
-	ft_putstr(func("Hello"));
+    cypher("Hello World");
 	return (0);
 }

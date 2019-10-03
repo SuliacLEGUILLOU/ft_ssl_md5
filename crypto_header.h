@@ -14,10 +14,18 @@
 # define FT_SSL_MD5_CRYPTO_HEADER_H
 
 # include <stdlib.h>
+# include <stdint.h>
 # include "libft/libft.h"
 
 # define INVALID_OPTION		1
 # define EXPECTED_STRING	2
+
+typedef struct	s_cypher{
+    uint32_t	(*add_chunk)(const char *);
+    char		*(*end)(void);
+    uint32_t    buff_len;
+    uint32_t	processed;
+}				t_cypher;
 
 typedef struct	s_target{
 	t_bool		is_file;
